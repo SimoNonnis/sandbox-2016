@@ -1,0 +1,12 @@
+{
+  "name": "recursion-in-js",
+  "version": "1.0.0",
+  "description": "> Recursion is when a function calls itself until it doesn't.",
+  "main": "example.js",
+  "scripts": {
+    "start": "node example.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
