@@ -1,0 +1,19 @@
+{
+  "name": "hapijs-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hapi": "^13.4.1",
+    "inert": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}
