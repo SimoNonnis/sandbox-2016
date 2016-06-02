@@ -14,6 +14,11 @@ server.connection({
 
 
 
+server.ext('onRequest', (req, reply) => {
+  console.log('onRequest');
+  reply.continue();
+});
+
 server.register(Inert, () => {
 
   // 4.routing
