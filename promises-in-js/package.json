@@ -1,0 +1,15 @@
+{
+  "name": "promises-in-js",
+  "version": "1.0.0",
+  "description": "A promise is a guarantee that you'll receive a future value (either success or failure)",
+  "main": "example.js",
+  "scripts": {
+    "start": "node example.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^1.5.3"
+  }
+}
