@@ -19,14 +19,35 @@ server.ext('onRequest', (req, reply) => {
   reply.continue();
 });
 
-server.register(Inert, () => {
-
+server.register(Inert, (err) => {
+  if (err) throw err;
   // 4.routing
+  // Home page
   server.route({
     method: 'GET',
     path: '/',
     handler (req, res) {
-      res.file('./public/logo.svg')
+      res.file('./public/index.html')
+    }
+  });
+
+  // About page
+  server.route({
+    method: 'GET',
+    path: '/about',
+    handler (req, res) {
+      res.file('./public/about.html')
+    }
+  });
+
+  // Static resources
+  server.route({
+    method: 'GET',
+    path: '/public/{param*}',
+    handler: {
+      directory: {
+        path: 'public'
+      }
     }
   });
 
