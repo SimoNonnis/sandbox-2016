@@ -1,0 +1,12 @@
+{
+  "name": "reduce",
+  "version": "1.0.0",
+  "description": "Reduce is a great functional programming tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
