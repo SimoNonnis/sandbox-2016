@@ -14,7 +14,7 @@ Promise.all([
     users.map(user => {
       user.json()
         .then(user => {
-          const userInfo = `username: ${user.login} \nbio: ${user.bio} \nwebsite: ${user.blog}\n\n`
+          let userInfo = `username: ${user.login} \nbio: ${user.bio} \nwebsite: ${user.blog}\n\n`
 
           console.log(userInfo);
         })
