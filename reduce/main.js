@@ -1,13 +1,19 @@
 // 1
 const data = [10,40,50];
 
-let reducer = (accumulator, item) => {
-  return accumulator + item;
+let meanReducer = (accumulator, value, index, array) => {
+  let intermediaryValue = accumulator + value;
+
+  if (index === array.length -1 ) {
+    return intermediaryValue / array.length;
+  }
+
+  return intermediaryValue;
 };
 
-let total = data.reduce(reducer, 0);
+let mean = data.reduce(meanReducer, 0);
 
-console.log(`total is: ${total}`);
+console.log(`total is: ${mean}`);
 
 
 // 2
