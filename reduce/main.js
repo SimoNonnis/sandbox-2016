@@ -57,3 +57,75 @@ let evensReducer = (acc, i) => {
 let evens = list.reduce(evensReducer, []);
 
 console.log(evens);
+
+// 4
+const input = [
+  {
+    title: "Batman Begins",
+    year: 2005,
+    cast: [
+      "Christian Bale",
+      "Michael Caine",
+      "Liam Neeson",
+      "Katie Holmes",
+      "Gary Oldman",
+      "Cillian Murphy"
+    ]
+  },
+  {
+    title: "The Dark Knight",
+    year: 2008,
+    cast: [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart",
+      "Michael Caine",
+      "Maggie Gyllenhal",
+      "Gary Oldman",
+      "Morgan Freeman"
+    ]
+  },
+  {
+    title: "The Dark Knight Rises",
+    year: 2012,
+    cast: [
+      "Christian Bale",
+      "Gary Oldman",
+      "Tom Hardy",
+      "Joseph Gordon-Levitt",
+      "Anne Hathaway",
+      "Marion Cotillard",
+      "Morgan Freeman",
+      "Michael Caine"
+    ]
+  }
+];
+
+var stars = input.reduce((acc, value) => {
+  value.cast.map(star => {
+    if (acc.indexOf(star) === -1) {
+      acc.push(star);
+    }
+  })
+
+  return acc;
+}, [])
+
+console.log(stars);
+
+// 5
+function increment(x) {
+  return x + 1;
+}
+
+const pipeline = [
+  increment,
+  increment,
+  increment
+];
+
+const output_value = pipeline.reduce((acc, fn) => {
+  return fn(acc);
+}, 0);
+
+console.log(output_value);
