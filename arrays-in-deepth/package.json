@@ -1,0 +1,12 @@
+{
+  "name": "arrays-in-deepth",
+  "version": "1.0.0",
+  "description": "Exploring concat, join, indexOf, slice, sort, filter, some, push",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
