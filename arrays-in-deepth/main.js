@@ -48,3 +48,64 @@ const items = [1,2,3,4,5,6];
 const copy = items.slice(2, -1);
 
 console.log(copy);
+
+//sort
+const books = [
+  {
+    title: 'Animal Farm',
+    year: 1945
+  },
+  {
+    title: 'Coming Up for Air',
+    year: 1939
+  },
+  {
+    title: 'Nineteen Eighty-Four',
+    year: 1949
+  }
+];
+
+const list = books
+  .sort((a, b) => a.year - b.year)
+  .map(x => `   <li>${x.title}: ${x.year}}`)
+  .join('\n');
+
+const output = ` <ul>\n${list}\n</ul>`;
+
+console.log(output);
+
+//filter
+const lessons = [
+    {
+        title: 'Javascript Arrays in Depth - join',
+        views: 960,
+        tags: ['array', 'join']
+    },
+    {
+        title: 'Javascript Arrays in Depth - concat',
+        views: 1050,
+        tags: ['array', 'concat']
+    },
+    {
+        title: 'Javascript Arrays in Depth - slice',
+        views: 2503,
+        tags: ['array', 'slice']
+    },
+    {
+        title: 'Javascript Functions in Depth - bind',
+        views: 2500,
+        tags: ['functions', 'bind']
+    }
+];
+
+const minViews = 1000;
+const searchTerm = 'array';
+
+var filtered = lessons
+  .filter(x => x.views > minViews)
+  .filter(x => x.tags.includes(searchTerm))
+  .sort((a, b) => b.views - a.views)
+  .map(x => `   <li>${x.title}</li>`)
+  .join('\n');
+
+console.log(` \n<ul>\n${filtered}\n</ul>\n`);
