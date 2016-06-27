@@ -76,26 +76,26 @@ console.log(output);
 
 //filter
 const lessons = [
-    {
-        title: 'Javascript Arrays in Depth - join',
-        views: 960,
-        tags: ['array', 'join']
-    },
-    {
-        title: 'Javascript Arrays in Depth - concat',
-        views: 1050,
-        tags: ['array', 'concat']
-    },
-    {
-        title: 'Javascript Arrays in Depth - slice',
-        views: 2503,
-        tags: ['array', 'slice']
-    },
-    {
-        title: 'Javascript Functions in Depth - bind',
-        views: 2500,
-        tags: ['functions', 'bind']
-    }
+  {
+    title: 'Javascript Arrays in Depth - join',
+    views: 960,
+    tags: ['array', 'join']
+  },
+  {
+    title: 'Javascript Arrays in Depth - concat',
+    views: 1050,
+    tags: ['array', 'concat']
+  },
+  {
+    title: 'Javascript Arrays in Depth - slice',
+    views: 2503,
+    tags: ['array', 'slice']
+  },
+  {
+    title: 'Javascript Functions in Depth - bind',
+    views: 2500,
+    tags: ['functions', 'bind']
+  }
 ];
 
 const minViews = 1000;
@@ -109,3 +109,41 @@ var filtered = lessons
   .join('\n');
 
 console.log(` \n<ul>\n${filtered}\n</ul>\n`);
+
+
+//some
+var tasks = [
+  {
+    title: 'Do laundry',
+    completed: true
+  },
+  {
+    title: 'Feed the cat',
+    completed: true
+  }
+];
+
+function addTask(title) {
+  if (tasks.some(x => x.title === title)) {
+    return console.log('Duplicate task!');
+  };
+  tasks.push({
+    title,
+    completed: false
+  })
+}
+
+addTask('Go to run');
+addTask('Go to run');
+
+console.log(tasks);
+
+//map
+const names = [
+  '  Simon',
+  'Milton   '
+];
+
+const trimedNames = names.map(x => x.trim());
+
+console.log(trimedNames);
