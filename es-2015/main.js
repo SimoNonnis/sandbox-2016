@@ -11,3 +11,14 @@ const messenger = {
 };
 
 messenger.deliver('Red fog');
+
+//let keyword
+const f = [];
+
+for (let i = 0;i <= 10; i++) {
+  f.push(_ => console.log(i));
+}
+
+f.forEach(x => x());
+
+//default parameters
