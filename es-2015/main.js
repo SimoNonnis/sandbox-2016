@@ -1,1 +1,13 @@
-console.log('hello');
+'use strict';
+// Arrow function
+const messenger = {
+  name: 'Simon',
+  handleMsg(msg, cb) {
+    return cb(msg);
+  },
+  deliver(msg) {
+    this.handleMsg(msg, _ => console.log(`Start op: "${msg}" -${this.name}`));
+  }
+};
+
+messenger.deliver('Red fog');
