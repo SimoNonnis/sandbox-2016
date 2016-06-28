@@ -22,3 +22,6 @@ for (let i = 0;i <= 10; i++) {
 f.forEach(x => x());
 
 //default parameters
+const greeting = ( name, msg = 'Hello') => console.log(`${msg} ${name}`);
+
+greeting('Simon', 'Hello');
