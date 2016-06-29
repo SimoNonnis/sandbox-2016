@@ -25,3 +25,27 @@ f.forEach(x => x());
 const greeting = ( name, msg = 'Hello') => console.log(`${msg} ${name}`);
 
 greeting('Simon', 'Hello');
+
+//const variable declaration
+const VALUE = {};
+VALUE.foo = 'hi';
+console.log(VALUE);
+
+const BLOCK = 'global';
+
+{
+  const BLOCK = 'block scope';
+  console.log(BLOCK);
+}
+
+console.log(BLOCK);
+
+//shorthand properties
+let firstName = 'Simon';
+let lastName = 'Nonnis';
+let role = 'web dev';
+
+let person = {firstName, lastName};
+let team = {person, role};
+
+console.log(team);
