@@ -49,3 +49,19 @@ let person = {firstName, lastName};
 let team = {person, role};
 
 console.log(team);
+
+//Shorthand Properties
+const color = 'orange';
+const speed = 10;
+
+const car = {
+  color,
+  speed,
+  go() {
+    console.log('vrooom');
+  }
+};
+
+console.log(car.color, car.speed);
+
+car.go();
