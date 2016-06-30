@@ -50,7 +50,7 @@ let team = {person, role};
 
 console.log(team);
 
-//Shorthand Properties
+//shorthand Properties
 const color = 'orange';
 const speed = 10;
 
@@ -65,3 +65,12 @@ const car = {
 console.log(car.color, car.speed);
 
 car.go();
+
+//spread operator
+const first = [1,2,3];
+const second = [4,5,6];
+
+first.push(second);
+first.push(...second);
+
+console.log(first);
