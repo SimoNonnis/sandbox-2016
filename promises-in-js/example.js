@@ -31,4 +31,20 @@ const p3 = Promise.reject('Ooops!');
 
 Promise.race([p1, p2, p3])
   .then(msg => console.log(`Wins the race: ${msg}\n`))
-  .catch(err => console.log(err))
+  .catch(err => console.log(err));
+
+
+//promise api
+const d = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (true) {
+      resolve('Good');
+    } else {
+      reject('no bueno');
+    }
+  }, 2000);
+});
+
+d.then(fulfillment => console.log('success: ', fulfillment));
+
+d.catch(rejection => console.log('error: ', rejection));
