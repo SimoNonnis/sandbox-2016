@@ -74,3 +74,19 @@ first.push(second);
 first.push(...second);
 
 console.log(first);
+
+//string interpolation
+function tag(strings, ...values) {
+  if (values[0] < 12) {
+    values[1] = 'Sleepy';
+  } else if (values[0] > 12) {
+    values[1] = 'Awake';
+  }
+
+  return `${strings[0]}${values[0]}${strings[1]}${values[1]}`
+}
+const message = tag`It's ${new Date().getHours()}, I am ${''}`;
+
+console.log(message);
+
+//Destructuring
