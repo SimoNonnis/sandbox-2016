@@ -90,3 +90,26 @@ const message = tag`It's ${new Date().getHours()}, I am ${''}`;
 console.log(message);
 
 //Destructuring
+function modulePattern() {
+  return {
+    name: 'Simon',
+    surname: 'Nonnis'
+  }
+};
+
+const {name, surname} = modulePattern();
+
+console.log(name, surname);
+
+const people = [
+  {
+    firstName: 'Simon',
+    lastName: 'Nonnis'
+  },
+  {
+    firstName: 'Adam',
+    lastName: 'Snow'
+  }
+];
+
+people.map(({firstName}) => console.log(`* ${firstName}`))
