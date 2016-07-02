@@ -113,3 +113,51 @@ const people = [
 ];
 
 people.map(({firstName}) => console.log(`* ${firstName}`))
+
+//maps
+let myMap = new Map();
+
+//API
+// set()
+// get()
+// size
+// clear()
+// has()
+
+myMap.set('foo', 'bar');
+myMap.set('Simon', 'Nonnis');
+
+console.log(myMap.has('foo'));
+
+// iterators
+// entries
+// keys
+// values
+
+for (let value of myMap.values()) {
+  console.log(value);
+}
+
+//rest parameters
+function Store() {
+  let aisle = {
+    fruit: [],
+    vegetables: []
+  };
+
+  function add (category, ...items) {
+    console.log(items);
+    items.forEach((value) => {
+      aisle[category].push(value);
+    })
+  };
+
+  return {
+    aisle,
+    add
+  }
+};
+
+let myGroceryStore = new Store();
+
+myGroceryStore.add('fruit', 'orange', 'apples', 'grapes');
