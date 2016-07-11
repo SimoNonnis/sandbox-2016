@@ -20,3 +20,26 @@ console.log('hi my name is %s and i love %s', 'Simon', 'JS');
 //     console.log(i);
 //   console.groupEnd();
 // }
+
+// var foo;
+// console.assert(foo, 'foo is undefined');
+
+// for (let i = 0; i < 100; i++) {
+//   var num = Math.random() * 100;
+//
+//   if (num > 50) {
+//     console.count('greater than 50');
+//   } else {
+//     console.count('less than 50');
+//   }
+// }
+
+var arr = [];
+console.time('fill arr');
+for (let i = 0; i < 10; i++ ) {
+  arr.push(i);
+}
+console.log(arr);
+console.timeEnd('fill arr');
+
+// console.table(["apples", "oranges", "bananas"]);
