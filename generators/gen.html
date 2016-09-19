@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generators | Waterfall Fetch</title>
+</head>
+<body>
+<script>
+  function ajax(url) {
+  fetch(url)
+    .then(data => data.json())
+    .then(data => dataGen.next(data));
+  }
+
+  function* steps() {
+  console.log('Fetching users');
+  const users = yield ajax('http://jsonplaceholder.typicode.com/users');
+  console.log(users);
+
+  console.log('Fetching albums');
+  const albums = yield ajax('http://jsonplaceholder.typicode.com/albums');
+  console.log(albums);
+
+  }
+
+  const dataGen = steps();
+  dataGen.next();
+</script>
+</body>
+</html>
